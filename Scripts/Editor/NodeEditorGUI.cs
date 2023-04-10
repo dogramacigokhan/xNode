@@ -340,7 +340,7 @@ namespace XNodeEditor {
                 if (node == null) continue;
 
                 // Skip rendering output connections for culled nodes
-                if (this.culledNodes.Contains(node)) continue;
+                if (this.culledNodes != null && this.culledNodes.Contains(node)) continue;
 
                 // Draw full connections and output > reroute
                 foreach (XNode.NodePort output in node.Outputs) {
